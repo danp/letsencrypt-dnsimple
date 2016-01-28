@@ -32,3 +32,4 @@ Comes from the environment.
 * `DNSIMPLE_API_USER` and `DNSIMPLE_API_TOKEN`: get these from https://dnsimple.com/user
 * `NAMES`: a `,`-separated list of names that will be in the requested cert. Use `/` instead of `.` to denote the separation between subdomain and dnsimple domain. For example, to request a cert for `www.danp.net`, where `danp.net` is the domain dnsimple knows about, you'd use `www/danp.net`.
 * `ACME_CONTACT`: the contact to use for [registration](https://letsencrypt.github.io/acme-spec/#rfc.section.6.3)
+* `LETSENCRYPT_ENDPOINT`: optional, defaults to the production endpoint at `https://acme-v01.api.letsencrypt.org/`
