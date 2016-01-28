@@ -1,6 +1,6 @@
 # letsencrypt-dnsimple
 
-Quick hack to use LE [DNS challenge](https://letsencrypt.github.io/acme-spec/#rfc.section.7.4) with dnsimple.
+Quick hack to use the letsencrypt [DNS challenge](https://letsencrypt.github.io/acme-spec/#rfc.section.7.4) with dnsimple.
 
 ## Running
 
