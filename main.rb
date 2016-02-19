@@ -1,3 +1,4 @@
+require "fileutils"
 require "openssl"
 require "shellwords"
 
@@ -91,7 +92,8 @@ csr = Acme::Client::CertificateRequest.new(names: authorize_names.keys)
 puts "requesting certificate"
 certificate = acme.new_certificate(csr)
 
-File.write("#{filename_base}-key.pem", certificate.request.private_key.to_pem)
-File.write("#{filename_base}-cert.pem", certificate.to_pem)
-File.write("#{filename_base}-chain.pem", certificate.chain_to_pem)
-File.write("#{filename_base}-fullchain.pem", certificate.fullchain_to_pem)
+FileUtils.mkdir_p("live")
+File.write("live/#{filename_base}-privkey.pem", certificate.request.private_key.to_pem)
+File.write("live/#{filename_base}-cert.pem", certificate.to_pem)
+File.write("live/#{filename_base}-chain.pem", certificate.chain_to_pem)
+File.write("live/#{filename_base}-fullchain.pem", certificate.fullchain_to_pem)
