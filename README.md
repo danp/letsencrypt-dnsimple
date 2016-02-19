@@ -2,9 +2,9 @@
 
 Quick hack to use the letsencrypt [DNS challenge](https://letsencrypt.github.io/acme-spec/#rfc.section.7.4) with dnsimple.
 
-## Running
+## Running (Ruby)
 
-Requires ruby 2.3.0.
+Requires Ruby 2.3.0.
 
 ```bash
 $ gem install bundler
@@ -15,6 +15,22 @@ $ DNSIMPLE_API_USER=you@foo.org \
   ACME_CONTACT=mailto:you@foo.org \
   bundle exec ruby main.rb
 ```
+
+## Running (Docker)
+
+Requires Docker (Ruby not required).
+
+```bash
+$ docker run \
+  -e DNSIMPLE_API_USER=you@foo.org \
+  -e DNSIMPLE_API_TOKEN=... \
+  -e NAMES=foo.org,www/foo.org \
+  -e ACME_CONTACT=mailto:you@foo.org \
+  -v $(pwd)/live:/app/live \
+  -ti meskyanichi/letsencrypt-dnsimple
+```
+
+## Result
 
 `.pem` files will be written to files named after the value of `NAMES`, with the above config they would match `foo.org_www.foo.org-*`:
 
