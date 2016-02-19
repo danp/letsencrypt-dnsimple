@@ -19,10 +19,10 @@ $ DNSIMPLE_API_USER=you@foo.org \
 `.pem` files will be written to files named after the value of `NAMES`, with the above config they would match `foo.org_www.foo.org-*`:
 
 ```
-foo.org_www.foo.org-cert.pem
-foo.org_www.foo.org-chain.pem
-foo.org_www.foo.org-fullchain.pem
-foo.org_www.foo.org-key.pem
+./live/foo.org_www.foo.org-cert.pem
+./live/foo.org_www.foo.org-chain.pem
+./live/foo.org_www.foo.org-fullchain.pem
+./live/foo.org_www.foo.org-privkey.pem
 ```
 
 ## Config
