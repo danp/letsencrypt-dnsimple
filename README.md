@@ -27,7 +27,7 @@ foo.org_www.foo.org-key.pem
 
 ## Running with Docker
 
-Check out https://github.com/meskyanichi/dockerized-letsencrypt-dnsimple, which wraps this in a Docker container so a ruby install is not needed.
+Check out https://github.com/meskyanichi/dockerized-letsencrypt-dnsimple which wraps this in a Docker container so a ruby install is not needed.
 
 ## Config
 
