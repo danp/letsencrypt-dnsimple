@@ -2,7 +2,7 @@
 
 Quick hack to use the letsencrypt [DNS challenge](https://letsencrypt.github.io/acme-spec/#rfc.section.7.4) with dnsimple.
 
-## Running
+## Running with installed ruby
 
 Requires ruby 2.3.0.
 
@@ -24,6 +24,10 @@ foo.org_www.foo.org-chain.pem
 foo.org_www.foo.org-fullchain.pem
 foo.org_www.foo.org-key.pem
 ```
+
+## Running with Docker
+
+Check out https://github.com/meskyanichi/dockerized-letsencrypt-dnsimple, which wraps this in a Docker container so a ruby install is not needed.
 
 ## Config
 
