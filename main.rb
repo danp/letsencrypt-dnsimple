@@ -84,7 +84,7 @@ authorize_names.each do |authorize_name, authorize_domain_name|
   end
 end
 
-filename_base = authorize_names.keys.sort.join("_")
+filename_base = ENV["OUTPUT_FILE_BASE"] || authorize_names.keys.sort.join("_")
 
 csr = Acme::Client::CertificateRequest.new(names: authorize_names.keys)
 
