@@ -11,7 +11,7 @@ $ gem install bundler
 $ bundle install
 $ DNSIMPLE_API_USER=you@foo.org \
   DNSIMPLE_API_TOKEN=... \
-  NAMES=foo.org,www/foo.org \
+  NAMES=foo.org,www.foo.org \
   ACME_CONTACT=mailto:you@foo.org \
   bundle exec ruby main.rb
 ```
